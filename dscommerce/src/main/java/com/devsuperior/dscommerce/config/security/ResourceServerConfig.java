@@ -20,8 +20,7 @@ public class ResourceServerConfig {
 				auth -> auth.requestMatchers("/h2-console/**").permitAll().requestMatchers("/products/**").permitAll()
 						.requestMatchers("/categories/**").permitAll().anyRequest().authenticated());
 
-		http.headers(headers -> headers.frameOptions(frame -> frame.disable())); // H2 console
-
+		http.headers(headers -> headers.frameOptions(frame -> frame.disable()));
 		http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
 		return http.build();
