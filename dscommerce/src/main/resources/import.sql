@@ -2,9 +2,11 @@
 INSERT INTO tb_role (authority) VALUES ('ROLE_CLIENT');
 INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
 
--- USERS (senhas por enquanto em texto; depois a gente resolve com encoder/segurança)
-INSERT INTO tb_user (name, email, phone, password) VALUES ('Alex Brown', 'alex@gmail.com', '999999999', '$2a$10$7EqJtq98hPqEX7fNZaFWoOHi5Z8N7L/0Q4w2L8m5wzE2W1yZC7e5W');
-INSERT INTO tb_user (name, email, phone, password) VALUES ('Maria Green', 'maria@gmail.com', '888888888','$2a$10$7EqJtq98hPqEX7fNZaFWoOHi5Z8N7L/0Q4w2L8m5wzE2W1yZC7e5W');
+-- USERS
+INSERT INTO tb_user (name, email, phone, password) VALUES ('Alex Brown', 'alex@gmail.com', '999999999', '$2a$10$WDZzEMSoI3rmKpHHnu9NHuPSht3.tciMue8c.o4R1ZivKToM96lEa');
+INSERT INTO tb_user (name, email, phone, password) VALUES ('Maria Green', 'maria@gmail.com', '888888888', '$2a$10$WDZzEMSoI3rmKpHHnu9NHuPSht3.tciMue8c.o4R1ZivKToM96lEa');
+
+
 
 -- USER ROLES
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);

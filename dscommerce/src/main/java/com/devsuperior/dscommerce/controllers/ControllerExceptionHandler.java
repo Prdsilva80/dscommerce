@@ -44,6 +44,7 @@ public class ControllerExceptionHandler {
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ValidationErrorDTO> validation(MethodArgumentNotValidException e,
 			HttpServletRequest request) {
+		@SuppressWarnings("deprecation")
 		HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
 
 		ValidationErrorDTO err = new ValidationErrorDTO(Instant.now(), status.value(), "Validation error",

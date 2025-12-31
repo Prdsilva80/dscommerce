@@ -82,7 +82,7 @@ public class Order {
 	}
 
 	public OrderStatus getStatus() {
-		return OrderStatus.valueOf(status);
+		return OrderStatus.values()[status];
 	}
 
 	public void setStatus(OrderStatus status) {

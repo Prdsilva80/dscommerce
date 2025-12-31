@@ -73,6 +73,31 @@ public class Product {
 		return categories;
 	}
 
+	// ===== setters (necessários pro service) =====
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+	public void setDate(Instant date) {
+		this.date = date;
+	}
+
+	// Se você quiser permitir setar id (normalmente não precisa):
+	// public void setId(Long id) { this.id = id; }
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
